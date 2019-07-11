@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			@keyframes forward{
+				from{transform: scaleX(1);}
+				to{transform: scaleX(9);}
+			}
+			
+			.warp{
+				background: mediumseagreen;
+				width: 200px;
+				height: 200px;
+				position: relative;
+				top: 20px;
+			}
+			
+			.warp .box{
+				width: 100px;
+				height: 20px;
+				position: absolute;
+				top: 90px;
+				left:50px ;
+		
+				
+			}
+			
+			.warp .box .left{
+				width: 80px;
+				height: 20px;
+				left: 0;
+				float: left;
+				position: absolute;
+				border:1px solid white ;
+				border-radius:2px ;
+			}
+			
+			.warp .box .left .move{
+				width: 10%;
+				height: 100%;
+				background: white;
+				transform-origin:left; /*设置scale基点*/
+				animation: forward 5s linear infinite;		
+			}
+			
+			
+			.warp .box .right{
+				width: 6px;
+				height: 12px;
+				right: 8px;
+				top:3px;
+				position: absolute;
+				float: left;
+				border:1px solid white ;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="warp">
+			<div class="box">
+				<div class="left">
+					<div class="move"></div>
+				</div>
+				<div class="right"></div>
+			</div>
+		</div>
+	</body>
+</html>

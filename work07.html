@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			@keyframes forward{
+				from{transform: scaleY(.2);}
+				to{transform: scaleY(1);}
+			}
+			
+			@keyframes move{
+				0%{top: 0;left: 0;}
+				20%{top: 0;left: 76px;}
+				25%{top: 0;left: 76px;}
+				45%{top: 76px;left: 76px;}
+				50%{top: 76px;left: 76px;}
+				60%{top: 76px;left: 0;}
+				75%{top: 76px;left: 0;}
+				100%{top: 0;left: 0;}
+			}
+			
+			.warp{
+				background: mediumseagreen;
+				width: 200px;
+				height: 200px;
+				position: relative;
+				top: 20px;
+			}
+			
+			.warp .box{
+				background: sandybrown;
+				position: absolute;
+				top: 60px;
+				left: 60px;
+				height: 80px;
+				width: 80px;
+			}
+			
+			.warp .box .mibox{
+				height: 4px;
+				width: 4px;
+				background: white;
+				position: absolute;
+				left: 0;
+				top: 0;
+				animation:move 1s linear infinite;
+			}
+			
+			.warp .box div:nth-of-type(1){
+				left: 0;
+				transform-origin:left;
+				
+				
+			}
+			.warp .box div:nth-of-type(2){
+				width: 50px;
+				height: 50px;
+				border:1px solid white;
+				position: absolute;
+				top:14px;
+				left: 14px;
+			}
+			.warp .box div .move{
+				width: 50px;
+				height: 50px;
+				left: 0;
+				top:0;
+				
+				background-color: white;
+				transform-origin: center bottom; /*设置scale基点*/
+				animation: forward 5s linear infinite;
+				
+			} 
+			
+		</style>
+	</head>
+	<body>
+		<div class="warp">
+			
+			<div class="box">
+				<div class="mibox"></div>
+				
+				<div>
+					<div class="move">
+						
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>

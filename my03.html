@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.warp{
+				width: 200px;
+				height: 200px;
+				background-color: #3CB371;
+				position: relative;
+			}
+			.move{
+				width: 80px;
+				height: 80px;
+				background-color: transparent;
+				position: absolute;
+				top: 60px;
+				left: 60px;
+				animation: quan1 1s linear infinite;
+				animation-direction:alternate ;
+				
+				
+			}
+			.move>div{
+				width: 60px;
+				height: 60px;
+				background-color: transparent;
+				position: absolute;
+				top: 10px;
+				left: 8px;
+				border-radius: 50%;
+				border: 2px solid white;
+				border-top-color: transparent;
+				animation: quan 1s linear infinite;
+			}
+			@keyframes quan{
+				0%{
+					transform: rotateZ(0deg);
+				}
+				100%{
+					transform: rotateZ(360deg);
+				}
+			}
+			@keyframes quan1{
+				0%{
+					transform: scale(.2);
+				}
+				100%{
+					transform: scale(1);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="warp">
+			<div class="move">
+				<div></div>
+			</div>
+		</div>
+	</body>
+</html>

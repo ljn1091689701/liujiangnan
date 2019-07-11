@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			@keyframes quan{
+				from{transform: scale(0.3);opacity: 1;}
+				to{transform: scale(1.7);opacity: .2;}
+			}
+			
+			.warp{
+				background: mediumseagreen;
+				width: 200px;
+				height: 200px;
+				position: relative;
+				top: 20px;
+			}
+			
+			.warp div{
+				background-color: transparent;
+				border: 1px solid white;
+				width: 80px;
+				height: 80px;
+				top: 60px;
+				left: 60px;
+				position: absolute;
+				border-radius:50% ;
+				animation: quan 1s linear infinite;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="warp">
+			<div></div>
+		</div>
+		
+	</body>
+</html>

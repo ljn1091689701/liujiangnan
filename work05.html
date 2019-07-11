@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			@keyframes xz{
+				from{transform: rotate(0);}
+				to{transform: rotate(360deg);}
+			}
+			
+			.warp{
+				background: mediumseagreen;
+				width: 200px;
+				height: 200px;
+				position: relative;
+				top: 20px;
+			}
+			
+			
+			.warp .clock{
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				top:59px;
+				left: 59px;
+				border-radius: 50%;
+				border: 1px solid white;
+			}
+			
+			.warp .clock .time{
+				height: 3px;
+				width: 20px;
+				background: white;
+				position: absolute;
+				left:38px;
+				top:37.5px;
+				animation: xz 4s linear infinite;
+				transform-origin:3px 1px;
+				
+				
+			}
+			
+			
+			.warp .clock .branch{
+				height: 3px;
+				width: 30px;
+				background: white;
+				position: absolute;
+		/*		opacity: .2;*/
+				left: 38px;
+				top:37.5px;
+			    animation: xz 2s linear infinite;
+				transform-origin:3px 1px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="warp">
+			<div class="clock">
+				
+				<div class="time"></div>
+				<div class="branch"></div>
+			</div>
+		</div>
+	</body>
+</html>
